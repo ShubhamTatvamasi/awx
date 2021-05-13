@@ -8,7 +8,7 @@ export AWX_VERSION=0.9.0
 kubectl apply -f https://github.com/ansible/awx-operator/raw/"${AWX_VERSION}"/deploy/awx-operator.yaml
 ```
 
-install 
+install awx:
 ```bash
 kubectl apply -f - << EOF
 apiVersion: awx.ansible.com/v1beta1
@@ -20,7 +20,7 @@ spec:
 EOF
 ```
 
-get password:
+ID: `admin`, get password:
 ```bash
 kubectl get secret awx-admin-password -o jsonpath='{.data.password}' | base64 -d
 ```
