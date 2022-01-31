@@ -4,7 +4,7 @@ deploy on default `namespace` only.
 
 install operator:
 ```bash
-export AWX_VERSION=0.9.0
+export AWX_VERSION=0.16.0
 kubectl apply -f https://github.com/ansible/awx-operator/raw/"${AWX_VERSION}"/deploy/awx-operator.yaml
 ```
 
