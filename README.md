@@ -2,12 +2,24 @@
 
 https://github.com/ansible/awx-operator
 
-deploy on default `namespace` only.
-
-install operator:
+clone the awx-operator repo:
 ```bash
-export AWX_VERSION=0.16.0
-kubectl apply -f https://github.com/ansible/awx-operator/raw/"${AWX_VERSION}"/deploy/awx-operator.yaml
+git clone https://github.com/ansible/awx-operator.git
+```
+
+Checkout to the latest version:
+```bash
+git checkout 0.16.0
+```
+
+Deploy awx-operator:
+```bash
+make deploy
+```
+
+change default namespace to awx:
+```bash
+kubectl config set-context --current --namespace=awx
 ```
 
 install awx:
@@ -16,9 +28,9 @@ kubectl apply -f - << EOF
 apiVersion: awx.ansible.com/v1beta1
 kind: AWX
 metadata:
-  name: awx
+  name: awx-demo
 spec:
-  tower_ingress_type: Ingress
+  service_type: nodeport
 EOF
 ```
 
