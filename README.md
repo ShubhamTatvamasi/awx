@@ -1,5 +1,7 @@
 # awx
 
+https://github.com/ansible/awx-operator
+
 deploy on default `namespace` only.
 
 install operator:
