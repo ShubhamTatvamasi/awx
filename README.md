@@ -38,3 +38,10 @@ ID: `admin`, get password:
 ```bash
 kubectl get secret awx-demo-admin-password -o jsonpath='{.data.password}' | base64 -d
 ```
+
+Get service:
+```bash
+kubectl get svc
+```
+
+
