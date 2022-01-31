@@ -38,25 +38,3 @@ ID: `admin`, get password:
 ```bash
 kubectl get secret awx-demo-admin-password -o jsonpath='{.data.password}' | base64 -d
 ```
-
-ingress:
-```bash
-kubectl apply -f - << EOF
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: awx-ingress-2
-spec:
-  rules:
-  - host: awx.k8s.shubhamtatvamasi.com
-    http:
-      paths:
-      - backend:
-          service:
-            name: awx-service
-            port:
-              number: 80
-        path: /
-        pathType: ImplementationSpecific
-EOF
-```
