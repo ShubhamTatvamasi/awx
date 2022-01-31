@@ -36,7 +36,7 @@ EOF
 
 ID: `admin`, get password:
 ```bash
-kubectl get secret awx-admin-password -o jsonpath='{.data.password}' | base64 -d
+kubectl get secret awx-demo-admin-password -o jsonpath='{.data.password}' | base64 -d
 ```
 
 ingress:
