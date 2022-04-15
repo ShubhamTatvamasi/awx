@@ -31,7 +31,7 @@ kind: AWX
 metadata:
   name: awx
 spec:
-  service_type: nodeport
+  service_type: LoadBalancer
 EOF
 ```
 
