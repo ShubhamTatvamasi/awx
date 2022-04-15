@@ -35,11 +35,7 @@ spec:
 EOF
 ```
 
-Set service as `LoadBalancer`:
-```bash
-kubectl patch svc awx-service \
-  --patch='{"spec": {"type": "LoadBalancer"}}'
-```
+http://192.168.5.31/#/login
 
 ID: `admin`, get password:
 ```bash
