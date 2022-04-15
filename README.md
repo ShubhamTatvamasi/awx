@@ -51,4 +51,14 @@ Get service:
 kubectl get svc
 ```
 
+### CRD
 
+get awx deployment:
+```bash
+kubectl get awx
+```
+
+delete awx deployment:
+```bash
+kubectl delete awx awx
+```
