@@ -43,7 +43,7 @@ kubectl patch svc awx-service \
 
 ID: `admin`, get password:
 ```bash
-kubectl get secret awx-admin-password -o jsonpath='{.data.password}' | base64 -d
+kubectl get secret awx-admin-password -o jsonpath='{.data.password}' | base64 -d; echo
 ```
 
 Get service:
