@@ -9,7 +9,7 @@ git clone https://github.com/ansible/awx-operator.git
 
 Checkout to the latest version:
 ```bash
-git checkout 0.16.0
+git checkout 0.20.0
 ```
 
 Deploy awx-operator:
