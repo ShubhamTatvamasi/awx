@@ -37,7 +37,7 @@ EOF
 
 Set service as `LoadBalancer`:
 ```bash
-kubectl -n awx patch svc awx-service \
+kubectl patch svc awx-service \
   --patch='{"spec": {"type": "LoadBalancer"}}'
 ```
 
