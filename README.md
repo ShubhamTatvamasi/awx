@@ -10,7 +10,7 @@ cd awx-operator
 
 Checkout to the latest version:
 ```bash
-git checkout 0.20.0
+git checkout 0.21.0
 ```
 
 Deploy awx-operator:
